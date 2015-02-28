@@ -44,12 +44,21 @@ export default React.createClass({
     })
   },
 
+  storeUndo() {
+    var new_state = state.get()
+    var last_state = states[states.length - 1]
+    if (new_state !== last_state) {
+      states.push(new_state)
+    }
+  },
+
   onUndoLastChangeClick() {
-    state.set(states[states.length - 2])
+    states.pop()
+    state.set(states.pop())
   },
 
   render() {
-    states.push(state.get())
+    this.storeUndo()
 
     return (
       <DocumentTitle title={'Este.js • TodoMVC'}>
