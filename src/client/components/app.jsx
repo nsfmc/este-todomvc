@@ -16,9 +16,8 @@ export default React.createClass({
 
   componentDidMount() {
     state.on('change', () => {
-      // Try thousands todos with and without PureRenderMixin.
+      // Try hundreds todos with and without PureRenderMixin.
       console.time('whole app re-rendered')
-      // TODO: forceUpdate on requestAnimationFrame.
       this.forceUpdate(() => {
         console.timeEnd('whole app re-rendered')
       })
@@ -45,14 +44,13 @@ export default React.createClass({
   },
 
   storeUndo() {
-    var new_state = state.get()
-    var last_state = states[states.length - 1]
-    if (new_state !== last_state) {
-      states.push(new_state)
-    }
+    var newState = state.get()
+    var lastState = states[states.length - 1]
+    if (newState === lastState) return
+    states.push(newState)
   },
 
-  onUndoLastChangeClick() {
+  undo() {
     states.pop()
     state.set(states.pop())
   },
@@ -94,8 +92,8 @@ export default React.createClass({
             <button onClick={addHundredTodos}>Add Hundred Todos</button>
             <button
               disabled={states.length < 2}
-              onClick={this.onUndoLastChangeClick}
-            >Undo Last Change</button>
+              onClick={() => this.undo()}
+            >Undo</button>
           </div>
         </div>
       </DocumentTitle>
