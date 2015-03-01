@@ -1,8 +1,14 @@
 import React from 'react'
-import {getNewTodo} from '../todos/store'
+import immutable from 'immutable'
 import {addTodo, onNewTodoFieldChange} from '../todos/actions'
+import {addons} from 'react/addons'
 
 export default React.createClass({
+  mixins: [addons.PureRenderMixin],
+
+  propTypes: {
+    todo: React.PropTypes.instanceOf(immutable.Map)
+  },
 
   onKeyDown(e) {
     if (e.key == 'Enter')
@@ -10,6 +16,8 @@ export default React.createClass({
   },
 
   render() {
+    const todo = this.props.todo
+
     return (
       <input
         autoFocus="true"
@@ -18,7 +26,7 @@ export default React.createClass({
         onChange={onNewTodoFieldChange}
         onKeyDown={this.onKeyDown}
         placeholder="What needs to be done?"
-        value={getNewTodo().title}
+        value={todo.get('title')}
       />
     )
   }

@@ -3,7 +3,7 @@ import React from 'react'
 import ReactRouter from 'react-router'
 import TodoList from './todolist'
 import TodosFooter from './todosfooter'
-import {allCompleted, getCompleted, getRemaining, getTodos} from '../todos/store'
+import {allCompleted, getCompleted, getNewTodo, getRemaining, getTodos} from '../todos/store'
 import {toggleAll} from '../todos/actions'
 
 export default React.createClass({
@@ -21,7 +21,7 @@ export default React.createClass({
       <section id="todoapp">
         <header id="header">
           <h1>todos</h1>
-          <NewTodo />
+          <NewTodo todo={getNewTodo()} />
         </header>
         <section id="main">
           <input

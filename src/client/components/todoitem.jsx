@@ -65,7 +65,7 @@ export default React.createClass({
   },
 
   render() {
-    let todo = this.props.todo
+    const todo = this.props.todo
 
     return (
       <li className={classnames({editing: this.state.editing})}>
