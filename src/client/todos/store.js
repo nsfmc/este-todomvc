@@ -26,14 +26,13 @@ export const dispatchToken = dispatcher.register((payload) => {
       // Create a nice client unique enough id.
       let id = getRandomString()
       todosCursor(todos => todos.push(new TodoRecord({id, title}).toMap()))
-      newTodoCursor(todo => new TodoRecord)
+      newTodoCursor(todo => new TodoRecord().toMap())
       break
 
     case actions.onNewTodoFieldChange:
       let {name, value} = data
       switch (name) {
         case 'title':
-          // Field max length should be implemented in store.
           value = value.slice(0, MAX_TODO_TITLE_LENGTH)
           break
       }
@@ -83,7 +82,7 @@ export const dispatchToken = dispatcher.register((payload) => {
         })
       })
       break
-    
+
   }
 
 })
