@@ -2,7 +2,6 @@ import DocumentTitle from 'react-document-title'
 import React from 'react'
 import state from '../state'
 import {RouteHandler} from 'react-router'
-
 import {addHundredTodos} from '../todos/store'
 
 // App states history. It's good to have one, so we can replay user story for
@@ -50,6 +49,10 @@ export default React.createClass({
     states.push(newState)
   },
 
+  undoButtonIsShow() {
+    return states.length > 1
+  },
+
   undo() {
     states.pop()
     state.set(states.pop())
@@ -91,7 +94,7 @@ export default React.createClass({
             </ul>
             <button onClick={addHundredTodos}>Add Hundred Todos</button>
             <button
-              disabled={states.length < 2}
+              disabled={!this.undoButtonIsShow()}
               onClick={() => this.undo()}
             >Undo</button>
           </div>
