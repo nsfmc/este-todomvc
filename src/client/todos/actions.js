@@ -8,6 +8,7 @@ export function addTodo() {
 
 export function onNewTodoFieldChange(e) {
   // Only name and value is relevant.
+  // https://babeljs.io/docs/learn-es6/#destructuring
   let {name, value} = e.target
   dispatcher.dispatch(onNewTodoFieldChange, {name, value})
 }

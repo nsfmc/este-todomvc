@@ -1,2 +1,2 @@
-As you are writing app, you realize some code should be written reusable. Put it
-into lib directory, and maybe publish to npm later.
+As you are writing code, suddenly you realize something should be written as
+reusable from scratch. Start in lib, and once stabilized publish it in npm.
