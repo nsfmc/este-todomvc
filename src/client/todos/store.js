@@ -21,7 +21,7 @@ export const dispatchToken = dispatcher.register((payload) => {
 
   switch (action) {
     case actions.addTodo:
-      let title = getNewTodo().title.trim()
+      let title = getNewTodo().get('title').trim()
       if (!title) return
       // Create a nice client unique enough id.
       let id = getRandomString()
@@ -67,12 +67,29 @@ export const dispatchToken = dispatcher.register((payload) => {
         return todos.update(todos.indexOf(todo), (todo) => todo.merge(props))
       })
       break
+
+    // For performance testing.
+    case actions.addHundredTodos:
+      todosCursor(todos => {
+        return todos.withMutations(list => {
+          Range(0, 100).forEach(i => {
+            let id = getRandomString()
+            list.push(new TodoRecord({
+              completed: false,
+              id: id,
+              title: `Item #${id}`
+            }).toMap())
+          })
+        })
+      })
+      break
+    
   }
 
 })
 
-export function getNewTodo(): Object {
-  return newTodoCursor().toJS()
+export function getNewTodo() {
+  return newTodoCursor()
 }
 
 export function getTodos() {
@@ -89,20 +106,4 @@ export function getRemaining() {
 
 export function allCompleted() {
   return getTodos().every(isCompleted)
-}
-
-// For performance testing.
-export function addHundredTodos() {
-  todosCursor(todos => {
-    return todos.withMutations(list => {
-      Range(0, 100).forEach(i => {
-        let id = getRandomString()
-        list.push(new TodoRecord({
-          completed: false,
-          id: id,
-          title: `Item #${id}`
-        }).toMap())
-      })
-    })
-  })
 }

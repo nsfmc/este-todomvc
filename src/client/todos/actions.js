@@ -30,3 +30,7 @@ export function toggleAll(checked) {
 export function saveTodo(todo, props) {
   dispatcher.dispatch(saveTodo, {todo, props})
 }
+
+export function addHundredTodos() {
+  dispatcher.dispatch(addHundredTodos)
+}

@@ -2,7 +2,7 @@ import DocumentTitle from 'react-document-title'
 import React from 'react'
 import state from '../state'
 import {RouteHandler} from 'react-router'
-import {addHundredTodos} from '../todos/store'
+import {addHundredTodos} from '../todos/actions'
 
 // App states history. It's good to have one, so we can replay user story for
 // bug reporting for example.
