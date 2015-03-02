@@ -8,6 +8,9 @@
     "start": "gulp -p",
     "test": "gulp test"
   },
+  "engines": {
+    "node": "0.10.x"
+  },
   "dependencies": {
     "babel": "^4.0.1",
     "babel-core": "^4.0.1",
