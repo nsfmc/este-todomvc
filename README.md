@@ -31,9 +31,10 @@
 
 ## Run
 
-- `gulp` start development
-- `gulp -p` run app in production mode
-- `gulp build -p` build in production mode for continuous integration (CI)
+- `gulp` or `npm run dev` run app in development mode
+- `gulp -p` or 'npm start' run app in production mode
+- `gulp build -p` or `npm run build` build app for continuous integration (CI)
+- `gulp test` or 'npm test' to run tests
 
 ## Todo
 
@@ -52,4 +53,3 @@
 ## Credit
 
 Created by [Daniel Steigerwald](http://daniel.steigerwald.cz/), [twitter.com/steida](https://twitter.com/steida)
-
