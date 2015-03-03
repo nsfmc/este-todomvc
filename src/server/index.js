@@ -1,5 +1,5 @@
 if (!process.env.NODE_ENV)
-	throw new Error('Enviroment variable NODE_ENV must be set.');
+  throw new Error('Enviroment variable NODE_ENV must be set.');
 
 require('babel/register');
 
