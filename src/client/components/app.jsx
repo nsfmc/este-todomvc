@@ -6,7 +6,7 @@ import {addHundredTodos} from '../todos/actions'
 
 // App states history. It's good to have one, so we can replay user story for
 // bug reporting for example.
-const states = [
+const states = []
 
 // Leverage webpack require goodness for feature toggle based dead code removal.
 require('../../../assets/css/app.styl')
