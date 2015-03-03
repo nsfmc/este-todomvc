@@ -35,13 +35,13 @@
 ## Run
 
 - `gulp` or `npm run dev` run app in development mode
-- `gulp -p` or 'npm start' run app in production mode
+- `gulp -p` or `npm start` run app in production mode
 - `gulp build -p` or `npm run build` build app for continuous integration (CI)
-- `gulp test` or 'npm test' to run tests
+- `gulp test` or `npm test` to run tests
 
 ## Todo
 
-* [ ] [CircleCI](https://circleci.com/)
+* [x] [CircleCI](https://circleci.com/)
 * [ ] [Jest](https://facebook.github.io/jest)
 * [ ] [ESLint](http://eslint.org/), almost [ready](https://github.com/eslint/espree/issues/10).
 * [ ] [flowtype](http://flowtype.org/)
