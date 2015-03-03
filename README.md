@@ -9,7 +9,7 @@
 
 ![Este Logo](https://cloud.githubusercontent.com/assets/66249/5931133/9e973dfc-a699-11e4-83bc-7b5c6fb58bfd.jpeg)
 
-> The most cute web app boilerplate, with almost zero bus factor. Forget about over-abstracted frameworks, use sheer libraries and leverage standards.
+> The most cute web app boilerplate, with zero bus factor. Forget about over-abstracted frameworks, use sheer libraries and leverage standards.
 
 ## Features
 
