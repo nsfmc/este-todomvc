@@ -30,9 +30,7 @@ module.exports = function(isDevelopment) {
   var config = {
     cache: isDevelopment,
     debug: isDevelopment,
-    // This is not as dirty as it looks. It just generates source maps without
-    // being crazy slow. http://webpack.github.io/docs/configuration.html#devtool
-    devtool: isDevelopment ? 'eval' : '',
+    devtool: isDevelopment ? 'eval-source-map' : '',
     entry: isDevelopment ? [
       'webpack-dev-server/client?http://localhost:8888',
       // Why only-dev-server instead of dev-server:
