@@ -14,7 +14,9 @@
 
 ## Features
 
-- Written in [BabelScript](https://babeljs.io/). Are you kidding? No, the [babeljs.io](http://babeljs.io) seems to be the best JavaScript transpiler. It handles next generation JavaScripts with [React JSX](http://facebook.github.io/react/docs/jsx-in-depth.html) syntax spiced by [Flowtype](http://flowtype.org/) type [annotations](http://flowtype.org/docs/type-annotations.html#_) already.
+- Written in [babeljs.io](https://babeljs.io/), the best ES6 and ES7 transpiler.
+It handles future JavaScripts with [React JSX](http://facebook.github.io/react/docs/jsx-in-depth.html) syntax spiced by [Flowtype](http://flowtype.org/) type [annotations](http://flowtype.org/docs/type-annotations.html#_) already. Sourcemaps
+enabled by default.
 - [React](http://facebook.github.io/react/), [Flux](https://facebook.github.io/flux/), [react-router](https://github.com/rackt/react-router), [immutable.js](http://facebook.github.io/immutable-js/), and more awesomeness.
 - Isomorphic architecture with state-less stores, server rendering, and routing inside expressjs.
 - Global immutable app state like Om with cursors, so app state can be snapshotted and reloaded. Undo redo is super easy.
