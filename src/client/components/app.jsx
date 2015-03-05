@@ -68,7 +68,7 @@ export default React.createClass({
           <footer id="info">
             <p>Double-click to edit a todo</p>
             <p>Written by <a href="https://twitter.com/steida">Daniel Steigerwald</a></p>
-            <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+            <p>Part of <a href="https://github.com/steida/este">Este.js</a></p>
           </footer>
           <div className="playground">
             <p>
