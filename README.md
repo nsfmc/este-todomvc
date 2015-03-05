@@ -10,7 +10,7 @@
 
 ![Este Logo](https://cloud.githubusercontent.com/assets/66249/5931133/9e973dfc-a699-11e4-83bc-7b5c6fb58bfd.jpeg)
 
-> The most cute web app boilerplate, with zero bus factor. Forget about over-abstracted frameworks, use sheer libraries and leverage standards. 
+> The most cute web app starter kit with zero bus factor. Forget about over-abstracted frameworks, use sheer libraries and leverage standards.
 
 > Stay tuned here: [github.com/steida/este](https://github.com/steida/este).
 
@@ -60,4 +60,4 @@ enabled by default.
 
 ## Credit
 
-Created by [Daniel Steigerwald](http://daniel.steigerwald.cz/), [twitter.com/steida](https://twitter.com/steida)
+made by [steida](https://twitter.com/steida)
