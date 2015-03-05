@@ -46,6 +46,8 @@ enabled by default.
 
 ## Todo
 
+There is a chance some todos were already implemented in [github.com/steida/este](https://github.com/steida/este).
+
 * [x] [CircleCI](https://circleci.com/)
 * [ ] [Jest](https://facebook.github.io/jest)
 * [ ] [ESLint](http://eslint.org/), almost [ready](https://github.com/eslint/espree/issues/10).
