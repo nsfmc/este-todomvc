@@ -1,4 +1,4 @@
-# Este.js • [TodoMVC](http://todomvc.com)
+# [Este.js](https://github.com/steida/este) • [TodoMVC](http://todomvc.com)
 
 [![Circle CI](https://circleci.com/gh/steida/este-todomvc.svg?style=svg)](https://circleci.com/gh/steida/este-todomvc)
 [![Join the chat at https://gitter.im/steida/este-todomvc](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/steida/este-todomvc)
@@ -10,7 +10,9 @@
 
 ![Este Logo](https://cloud.githubusercontent.com/assets/66249/5931133/9e973dfc-a699-11e4-83bc-7b5c6fb58bfd.jpeg)
 
-> The most cute web app boilerplate, with zero bus factor. Forget about over-abstracted frameworks, use sheer libraries and leverage standards.
+> The most cute web app boilerplate, with zero bus factor. Forget about over-abstracted frameworks, use sheer libraries and leverage standards. 
+
+> Stay tuned here: [github.com/steida/este](https://github.com/steida/este).
 
 ## Features
 
