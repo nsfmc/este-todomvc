@@ -4,8 +4,10 @@ var makeWebpackConfig = require('./webpack/makeconfig')
 var webpackBuild = require('./webpack/build')
 var webpackDevServer = require('./webpack/devserver')
 var yargs = require('yargs')
-var jest = require('gulp-jest')
-require('harmonize')()
+var jest = require('jest-cli')
+var gutil = require('gulp-util')
+var harmonize = require('harmonize');
+harmonize();
 
 var args = yargs
   .alias('p', 'production')
@@ -24,10 +26,19 @@ gulp.task('build', ['build-webpack'])
 gulp.task('test', webpackBuild(makeWebpackConfig(false)))
 
 gulp.task('jest', function() {
-    return gulp.src('src/__tests__')
-        .pipe(jest({
-            'scriptPreprocessor': '../../node_modules/babel-jest'
-        }))
+  var rootDir = './src',
+    successHandler = function (success) {
+      process.on('exit', function(){
+        process.exit(success ? 0 : 1)
+      })
+    }
+
+  jest.runCLI({config: {
+    'rootDir': rootDir,
+    'scriptPreprocessor': '../node_modules/babel-jest',
+    'testFileExtensions': ['es6', 'js'],
+    'moduleFileExtensions': ['js', 'json', 'es6']
+  }}, rootDir, successHandler)
 })
 
 gulp.task('server', ['env', 'build'], bg('node', 'src/server'))
